@@ -1,12 +1,12 @@
 # UTFPR Planejamento Urbano e Regional
 
-Analise de dados da pesquisa OD voltadas ao bairro portao. 
+Analise de dados da pesquisa OD voltadas a Regional portao. 
 
 **Aspectos a serem avaliados com os dados da pesquisa OD**
 
 1) colisoes com ciclistas (ver rep git)
 2) viagens atraidas (comparacao)
-3) viagens geradas (comparacao)
+3) viagens produzidas (comparacao)
 4) reparticao modal (comparacao) **OK** 
   - script `processamento.R`
   - saidas `graficos/`
