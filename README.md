@@ -5,22 +5,34 @@ Analise de dados da pesquisa OD voltadas a Regional portao.
 **Aspectos a serem avaliados com os dados da pesquisa OD**
 
 1) colisoes com ciclistas (ver rep git) **OK** 
+
  - script ``colisoes_bairro.R`
  - dados brutos `shp/`
  - saidas `graficos/` e `mapas/`
-2) viagens atraidas (comparacao)
-3) viagens produzidas (comparacao)
-4) reparticao modal (comparacao) **OK** 
+
+2) reparticao modal (comparacao) **OK** 
+
   - script `processamento.R`
   - saidas `graficos/`
-5) renda x tempo de viagem (todos os bairros) **OK** 
+3) renda x tempo de viagem (todos os bairros) **OK** 
+
  - script `graficos_od.R`
  - saidas `graficos/`
 
 
 **Pesquisa Perfil Ciclista**
 
-6) comparacao residentes na Regional Portao x média municipal
+6) comparacao residentes na Regional Portao x média municipal **OK** 
+
+6.1) Analise por genero **OK** 
+
+ - script `perfil_ciclista/plot_masc-fem.R`
+ - saidas `geral/` e `portao/`
+ 
+6.2) Resultado geral **OK** 
+
+ - script `perfil_ciclista/plot_geral.R`
+ - saidas `geral_unico/` e `portao_unico/`
 
 **Shapefile eixo cicloviario (IPPUC)**
 
