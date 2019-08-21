@@ -4,7 +4,10 @@ Analise de dados da pesquisa OD voltadas a Regional portao.
 
 **Aspectos a serem avaliados com os dados da pesquisa OD**
 
-1) colisoes com ciclistas (ver rep git)
+1) colisoes com ciclistas (ver rep git) **OK** 
+ - script ``colisoes_bairro.R`
+ - dados brutos `shp/`
+ - saidas `graficos/` e `mapas/`
 2) viagens atraidas (comparacao)
 3) viagens produzidas (comparacao)
 4) reparticao modal (comparacao) **OK** 
