@@ -6,7 +6,7 @@ Analise de dados da pesquisa OD voltadas a Regional Portão
 
 1) colisoes com ciclistas (ver rep git) **OK** 
 
- - script ``colisoes_bairro.R`
+ - script `colisoes_bairro.R`
  - dados brutos `shp/`
  - saidas `graficos/` e `mapas/`
 
