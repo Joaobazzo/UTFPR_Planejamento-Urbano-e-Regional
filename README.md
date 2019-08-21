@@ -29,12 +29,12 @@ Analise de dados da pesquisa OD voltadas a Regional Portão
 6.2) Resultado geral **OK** 
 
  - script `perfil_ciclista/plot_geral.R`
- - saidas `geral_unico/` e `portao_unico/`
+ - saidas `perfil_ciclista/geral_unico/` e `perfil_ciclista/portao_unico/`
 
 6.1) Analise por genero **OK** 
 
  - script `perfil_ciclista/plot_masc-fem.R`
- - saidas `geral/` e `portao/`
+ - saidas `perfil_ciclista/geral/` e `perfil_ciclista/portao/`
 
 **Shapefile eixo cicloviario (IPPUC)**
 
