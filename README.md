@@ -1,4 +1,5 @@
-# UTFPR_Planejamento-Urbano-e-Regional
+# UTFPR_Planejamento Urbano e Regional
+
 Analise de dados da pesquisa OD voltadas ao bairro portao. 
 
 **Aspectos a serem avaliados com os dados da pesquisa OD**
@@ -14,7 +15,7 @@ Analise de dados da pesquisa OD voltadas ao bairro portao.
  - saidas `graficos/`
 
 
-**- Pesquisa Perfil Ciclista**
+**Pesquisa Perfil Ciclista**
 
 6) comparacao residentes na Regional Portao x média municipal
 
