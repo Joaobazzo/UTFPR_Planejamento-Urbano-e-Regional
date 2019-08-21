@@ -9,28 +9,13 @@ Analise de dados da pesquisa OD voltadas a Regional portao.
  - script ``colisoes_bairro.R`
  - dados brutos `shp/`
  - saidas `graficos/` e `mapas/`
-<<<<<<< HEAD
 
 2) reparticao modal (comparacao) **OK** 
 
   - script `processamento.R`
   - saidas `graficos/`
+  
 3) renda x tempo de viagem (todos os bairros) **OK** 
-=======
-2) viagens atraidas (comparacao)
-
-3) viagens produzidas (comparacao)
-
-4) reparticao modal (comparacao) **OK** 
-
-  - script `processamento.R`
-  - saidas `graficos/`
-5) renda x tempo de viagem (todos os bairros) **OK** 
->>>>>>> 197f725f120f9afab32f43c1ebdd0348bdb95288
-
- - script `graficos_od.R`
- - saidas `graficos/`
-
 
 **Pesquisa Perfil Ciclista**
 
@@ -50,11 +35,6 @@ Analise de dados da pesquisa OD voltadas a Regional portao.
 
  - script `perfil_ciclista/plot_masc-fem.R`
  - saidas `geral/` e `portao/`
- 
-6.2) Resultado geral **OK** 
-
- - script `perfil_cilsita/plot_geral.R`
- - saidas `geral_unico/` e `portao_unico/`
 
 **Shapefile eixo cicloviario (IPPUC)**
 
