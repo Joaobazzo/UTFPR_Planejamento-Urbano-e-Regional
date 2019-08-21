@@ -1,6 +1,6 @@
 # UTFPR Planejamento Urbano e Regional
 
-Analise de dados da pesquisa OD voltadas a Regional portao. 
+Analise de dados da pesquisa OD voltadas a Regional Portão
 
 **Aspectos a serem avaliados com os dados da pesquisa OD**
 
