@@ -32,7 +32,7 @@ df_renda <- read.csv("dados/df_renda.csv")
 df_renda$renda_media <- df_renda$renda_media*13/1000
 df_renda$uso_car_fem <- df_renda$uso_car_fem*100
 df_renda$uso_bus <- df_renda$uso_bus*100
-df_renda$uso_car <- df_renda$uso_car*100
+df_renda$uso_car <- df_renda$uso_car*100;break()
 #plots
 
 p1 <- ggplot(df_renda, aes(y=renda_media, x=uso_car_fem, group=1))+
