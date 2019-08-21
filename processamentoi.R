@@ -1,6 +1,7 @@
 
 setwd("E:/Documents/CICLO/Mestrado/PROJETO/dados/Pesquisa_OD_IPPUC/")
 rm(list=ls())
+require(ggplot2)
 file <- read.csv("arquivos_saida/csv/estendida/deslocamentos_extrapolacao_tx_viagem_variavel.csv")
 
 bairrosp <- c("GUAIRA","AGUA VERDE","VILA IZABEL","PORTAO",
@@ -36,7 +37,7 @@ dtf1 <- data.frame("bairro"=rep(bairros,5),
                    "Modo"=rep(colnames(dtf)[2:6],each=130),
                    "valor"=c(dtf$`A pé`,dtf$Bici,dtf$Carro,
                              dtf$TC,dtf$Outros))
-require(ggplot2)
+
 ggplot(dtf1,aes(x=Modo,y=valor,color=Modo))+
   geom_boxplot()+ylab("% repartição modal por bairro")+
   xlab("Modo de transporte")+
@@ -52,6 +53,8 @@ dtf2 <- data.frame("bairro"=rep(bairros,5),
                    "valor"=c(dtf$`A pé`,dtf$Bici,dtf$Carro,
                              dtf$TC,dtf$Outros))
 dtf2$`Regional Portão` <- dtf2$bairro%in%bairrosp
+dtf2$`Regional Portão`[dtf2$`Regional Portão`%in%F] <- "Outras regionais"
+dtf2$`Regional Portão`[dtf2$`Regional Portão`%in%T] <- "Reg. Portão"
 
 ggplot(dtf2,aes(x=Modo,y=valor,color=`Regional Portão`))+
   geom_boxplot()+ylab("% repartição modal por bairro")+
@@ -83,6 +86,10 @@ dtf2 <- data.frame("bairro"=rep(bairros,5),
                    "valor"=c(dtf$`A pé`,dtf$Bici,dtf$Carro,
                              dtf$TC,dtf$Outros))
 dtf2$`Regional Portão` <- dtf2$bairro%in%bairrosp
+
+dtf2$`Regional Portão`[dtf2$`Regional Portão`%in%F] <- "Outras regionais"
+dtf2$`Regional Portão`[dtf2$`Regional Portão`%in%T] <- "Reg. Portão"
+
 dtf2 <- dtf2[dtf2$Modo%in%"Bici",]
 ggplot(dtf2,aes(x=Modo,y=valor,color=`Regional Portão`))+
   geom_boxplot()+ylab("% repartição modal por bairro")+
