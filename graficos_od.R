@@ -32,55 +32,54 @@ df_renda <- read.csv("dados/df_renda.csv")
 df_renda$renda_media <- df_renda$renda_media*13/1000
 df_renda$uso_car_fem <- df_renda$uso_car_fem*100
 df_renda$uso_bus <- df_renda$uso_bus*100
-df_renda$uso_car <- df_renda$uso_car*100;break()
+df_renda$uso_car <- df_renda$uso_car*100
 #plots
-
-p1 <- ggplot(df_renda, aes(y=renda_media, x=uso_car_fem, group=1))+
-  geom_point(size=1.75)+xlab("Women participation among \n car drivers (%)")+
-  ylab("Neighborhood annual average \n income (10³ R$)")+
-  theme(text=element_text(family="Times New Roman"))+
-  stat_function(fun=f1)+
-  annotate("text",family="Times New Roman",label=e1, parse=TRUE, x=27, y=75, hjust=1.1, vjust=-.5)+
-  annotate("text",family="Times New Roman",label=e11, parse=TRUE, x=23, y=71, hjust=1.1, vjust=-.5)
-p1
-p11 <- ggplot(df_renda, aes(x=renda_media, y=uso_car_fem, group=1))+
-  geom_point(size=1.75)+ylab("Women participation among \n car drivers (%)")+
-  xlab("Neighborhood annual average income (10³ R$)")+
+bairrosp <- c("Guaíra","Água Verde","Vila Izabel","Portão",
+              "Parolin","Seminário","Fazendinha","Santa Quitéria")
+df_renda$`Regional` <- df_renda$bairro%in%bairrosp
+df_renda$`Regional`[df_renda$`Regional`%in%F] <- "Outras regionais"
+df_renda$`Regional`[df_renda$`Regional`%in%T] <- "Reg. Portão"
+break()
+p11 <- ggplot(df_renda, aes(x=renda_media, y=uso_car_fem,color=Regional, group=1))+
+  geom_point(size=1.75)+xlab("Participação feminina entre motoristas(%)")+
+  ylab("Renda média anual do bairro (10³ R$)")+
   theme(text=element_text(family="Times New Roman"))+
   stat_function(fun=ff1)+
   annotate("text",family="Times New Roman",label=ef1, parse=TRUE, x=85, y=17, hjust=1.1, vjust=-.5)+
   annotate("text",family="Times New Roman",label=ef11, parse=TRUE, x=81, y=13, hjust=1.1, vjust=-.5)
-p11
-p1
-p2 <- ggplot(df_renda, aes(y=renda_media, x=uso_bus, group=1))+
-  geom_point(size=1.75)+xlab("Bus share (%)")+ylab(NULL)+
+ggsave(filename = "E:/Documents/CICLO/Apresentacoes/Aula_Debora-Rocha/UTFPR_Planejamento-Urbano-e-Regional/graficos/woman_participation_car_drivers.jpg",
+       width = 17,height = 10,units = "cm",scale = 0.75,dpi = 300,plot = p11)
+
+p2 <- ggplot(df_renda, aes(y=renda_media, x=uso_bus,color=`Regional`, group=1))+
+  geom_point(size=1.75)+xlab("Uso de TC (%)")+  ylab("Renda média anual do bairro (10³ R$)")+
   theme(text=element_text(family="Times New Roman"))+
   stat_function(fun=f2)+
   annotate("text",family="Times New Roman", label=e2, parse=TRUE,x = 47.0,y=70.0)+
   annotate("text",family="Times New Roman", label=e22, parse=TRUE,x = 43.0,y=66.0)
-p2
-p22 <- ggplot(df_renda, aes(y=renda_media, x=uso_bus, group=1))+
-  geom_point(size=1.75)+xlab("Bus share (%)")+
-  ylab("Neighborhood annual average \n income (10³ R$)")+
-  theme(text=element_text(family="Times New Roman"))+
-  stat_function(fun=f2)+
-  annotate("text",family="Times New Roman", label=e2, parse=TRUE,x = 59.0,y=78.0, hjust=1.1, vjust=-.5)+
-annotate("text",family="Times New Roman", label=e22, parse=TRUE,x = 53.0,y=73.0, hjust=1.1, vjust=-.5)
-p22
-p3 <- ggplot(df_renda, aes(x=ave_time,y=renda_media,group=1))+
-    geom_point(size=1.75)+xlab("Average travel time (min)")+ylab(NULL)+
+ggsave(filename = "E:/Documents/CICLO/Apresentacoes/Aula_Debora-Rocha/UTFPR_Planejamento-Urbano-e-Regional/graficos/TC_vs_Renda.jpg",
+       width = 17,height = 10,units = "cm",scale = 0.75,dpi = 300,plot = p2)
+
+p3 <- ggplot(df_renda, aes(x=ave_time,y=renda_media,color=`Regional`,group=1))+
+    geom_point(size=1.75)+xlab("Tempo médio de viagem (min)")+
+  ylab("Renda média anual do bairro (10³ R$)")+
   theme(text=element_text(family="Times New Roman"))+
   stat_function(fun=f3,colour="black")+
   annotate("text",family="Times New Roman", label=e3, parse=TRUE, x=42, y=78, hjust=1.1, vjust=-.5)+
   annotate("text",family="Times New Roman", label=e33, parse=TRUE, x=39, y=74, hjust=1.1, vjust=-.5)
-  #guides(fill=guide_legend(title="la"))
-p4 <- ggplot(df_renda, aes(y=renda_media, x=uso_car, group=1))+
-  geom_point(size=1.75)+xlab("Car share (%)")+ylab(NULL)+
+
+ggsave(filename = "E:/Documents/CICLO/Apresentacoes/Aula_Debora-Rocha/UTFPR_Planejamento-Urbano-e-Regional/graficos/Renda_vs_tempo-viagem.jpg",
+       width = 17,height = 10,units = "cm",scale = 0.75,dpi = 300,plot = p3)
+
+p4 <- ggplot(df_renda, aes(y=renda_media, x=uso_car,color=`Regional`, group=1))+
+  geom_point(size=1.75)+xlab("Uso do automóvel (%)")+
+  ylab("Renda média anual do bairro (10³ R$)")+
   theme(text=element_text(family="Times New Roman"))+
   stat_function(fun=f4)+
-  annotate("text",family="Times New Roman", label=e4, parse=TRUE, x=65, y=78, hjust=1.1, vjust=-.5)+
-  annotate("text",family="Times New Roman", label=e44, parse=TRUE, x=55, y=74, hjust=1.1, vjust=-.5)
-p4
+  annotate("text",family="Times New Roman", label=e4, parse=TRUE, x=75, y=78, hjust=1.1, vjust=-.5)+
+  annotate("text",family="Times New Roman", label=e44, parse=TRUE, x=85, y=74, hjust=1.1, vjust=-.5)
+
+ggsave(filename = "E:/Documents/CICLO/Apresentacoes/Aula_Debora-Rocha/UTFPR_Planejamento-Urbano-e-Regional/graficos/Renda_vs_uso-auto.jpg",
+       width = 17,height = 10,units = "cm",scale = 0.75,dpi = 300,plot = p4)
 #pf <- grid.arrange(p1,p2,p3,p4,ncol=2)
 
 # salva
