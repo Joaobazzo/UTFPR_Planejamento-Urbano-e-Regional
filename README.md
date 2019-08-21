@@ -1,5 +1,5 @@
 # UTFPR_Planejamento-Urbano-e-Regional
-Analise de dados da pesquisa OD voltadas ao bairro portão. 
+Analise de dados da pesquisa OD voltadas ao bairro portao. 
 
 Aspectos a serem avaliados com os dados da pesquisa OD
 
@@ -16,4 +16,8 @@ Pesquisa Perfil Ciclista
 Shapefile eixo cicloviario (IPPUC)
 
 - verificacao de eixo cicloviario mais proximo
+
+Bruno Motta (indice de ciclabilidade)
+
+- 
 
