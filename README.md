@@ -7,6 +7,7 @@ Aspectos a serem avaliados com os dados da pesquisa OD
 - viagens atraidas (comparacao)
 - viagens geradas (comparacao)
 - reparticao modal (comparacao)
+- renda x tempo de viagem (todos os bairros)
 
 
 Pesquisa Perfil Ciclista
@@ -19,5 +20,9 @@ Shapefile eixo cicloviario (IPPUC)
 
 Bruno Motta (indice de ciclabilidade)
 
-- 
+- Percepção de segurança (entrevista qualitativa)
+
+OSMaps
+
+- Unidirecionalidade de vias
 
