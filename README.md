@@ -17,6 +17,8 @@ Analise de dados da pesquisa OD voltadas a Regional Portão
   
 3) renda x tempo de viagem (todos os bairros) **OK** 
 
+4) Viagens por auto dentro do proprio bairro
+
 **Pesquisa Perfil Ciclista**
 
 6) comparacao residentes na Regional Portao x média municipal **OK** 
