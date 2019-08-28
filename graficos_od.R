@@ -40,13 +40,14 @@ df_renda$`Regional` <- df_renda$bairro%in%bairrosp
 df_renda$`Regional`[df_renda$`Regional`%in%F] <- "Outras regionais"
 df_renda$`Regional`[df_renda$`Regional`%in%T] <- "Reg. Portão"
 break()
-p11 <- ggplot(df_renda, aes(x=renda_media, y=uso_car_fem,color=Regional, group=1))+
+p11 <- ggplot(df_renda, aes(y=renda_media, x=uso_car_fem,color=Regional, group=1))+
   geom_point(size=1.75)+xlab("Participação feminina entre motoristas(%)")+
   ylab("Renda média anual do bairro (10³ R$)")+
   theme(text=element_text(family="Times New Roman"))+
-  stat_function(fun=ff1)+
+  stat_function(fun=f1)#+
   annotate("text",family="Times New Roman",label=ef1, parse=TRUE, x=85, y=17, hjust=1.1, vjust=-.5)+
   annotate("text",family="Times New Roman",label=ef11, parse=TRUE, x=81, y=13, hjust=1.1, vjust=-.5)
+p11
 ggsave(filename = "E:/Documents/CICLO/Apresentacoes/Aula_Debora-Rocha/UTFPR_Planejamento-Urbano-e-Regional/graficos/woman_participation_car_drivers.jpg",
        width = 17,height = 10,units = "cm",scale = 0.75,dpi = 300,plot = p11)
 
